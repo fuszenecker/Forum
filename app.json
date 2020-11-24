@@ -1,10 +1,7 @@
 {
-  "name": "Start on Heroku: Go",
-  "description": "Go Getting Started Example App",
+  "name": "Forum",
+  "description": "Forum - demo webshop",
   "keywords": [
-    "getting-started",
-    "go",
-    "sample",
     "example"
   ],
   "website": "http://github.com/heroku/go-getting-started",

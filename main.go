@@ -1,8 +1,6 @@
 package main
 
 import (
-	"log"
-	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -13,17 +11,20 @@ func main() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
-		log.Fatal("$PORT must be set")
+		port = "3000"
+		// log.Fatal("$PORT must be set")
 	}
 
-	router := gin.New()
-	router.Use(gin.Logger())
-	router.LoadHTMLGlob("templates/*.tmpl.html")
-	router.Static("/static", "static")
+	router := gin.Default()
+	//router.Use(gin.Logger())
+	router.Static("/ui", "frontend/build")
 
 	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl.html", nil)
+		c.Redirect(301, "/ui/index.html")
 	})
+
+	// router.StaticFile("/index.html", "./frontend/build/index.html")
+	// router.StaticFile("/favicon.ico", "./frontend/build/favicon.ico")
 
 	router.Run(":" + port)
 }
