@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme: Theme) =>
             width: 400
         },
         p: {
-            margin: 15
+            marginTop: 15,
+            marginBottom: 15,
         }
     }),
 );
