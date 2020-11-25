@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
             flexGrow: 1,
         },
         appBar: {
-            background: "#304860"
+            background: "#204060"
         }
     }),
 );

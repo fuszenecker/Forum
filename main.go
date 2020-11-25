@@ -11,12 +11,10 @@ func main() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
-		port = "3000"
-		// log.Fatal("$PORT must be set")
+		port = "3001"
 	}
 
 	router := gin.Default()
-	//router.Use(gin.Logger())
 	router.Static("/ui", "frontend/build")
 
 	router.GET("/", func(c *gin.Context) {
