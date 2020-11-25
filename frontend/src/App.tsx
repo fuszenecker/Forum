@@ -11,6 +11,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import MainContent from "./Content"
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -22,6 +24,9 @@ const useStyles = makeStyles((theme: Theme) =>
         title: {
             flexGrow: 1,
         },
+        appBar: {
+            background: "#304860"
+        }
     }),
 );
 
@@ -30,7 +35,7 @@ function App() {
 
     return (
         <div>
-            <AppBar position="static">
+            <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
@@ -41,6 +46,8 @@ function App() {
                     <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
+
+            <MainContent />
         </div>
     );
 }
