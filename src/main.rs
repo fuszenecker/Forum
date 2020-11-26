@@ -29,7 +29,7 @@ async fn main() -> std::io::Result<()> {
             .wrap(Logger::default())
 
             // Redirection
-            .route("/", web::get().to(|| { HttpResponse::build(StatusCode::PERMANENT_REDIRECT)
+            .route("/", web::get().to(|| { HttpResponse::build(StatusCode::MOVED_PERMANENTLY)
                 .set_header(http::header::LOCATION, "/ui").finish() } ))
 
             // Static SPA content:
