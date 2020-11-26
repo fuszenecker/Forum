@@ -1,1 +1,1 @@
-web: ./target/release/go-getting-started
+web: ./target/debug/rs_actix
