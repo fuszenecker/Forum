@@ -1,1 +1,1 @@
-web: ./target/debug/rs_actix
+web: ./target/release/rs_actix
