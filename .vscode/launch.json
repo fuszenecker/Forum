@@ -5,14 +5,41 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
-            "type": "go",
+            "type": "lldb",
             "request": "launch",
-            "mode": "auto",
-            // "program": "${fileDirname}",
-            "program": "${workspaceFolder}/main.go",
-            "env": {},
-            "args": []
+            "name": "Debug executable 'rs_actix'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rs_actix",
+                    "--package=rs_actix"
+                ],
+                "filter": {
+                    "name": "rs_actix",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'rs_actix'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=rs_actix",
+                    "--package=rs_actix"
+                ],
+                "filter": {
+                    "name": "rs_actix",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

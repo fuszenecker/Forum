@@ -5,3 +5,4 @@ vendor/
 templates/
 *.exe
 frontend/.eslintcache
+target/

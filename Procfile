@@ -1,1 +1,1 @@
-web: bin/go-getting-started
+web: ./target/release/rs_actix

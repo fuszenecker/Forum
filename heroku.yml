@@ -2,7 +2,8 @@
 # Officially unsupported, but works.
 build:
   languages:
-    - go
+    - rust
+    - node
 
 run:
   web: go-getting-started
